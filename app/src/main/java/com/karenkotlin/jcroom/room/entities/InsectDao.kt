@@ -4,6 +4,7 @@ import androidx.room3.Dao
 import androidx.room3.Delete
 import androidx.room3.Insert
 import androidx.room3.Query
+import androidx.room3.Update
 
 @Dao
 interface InsectDao {
@@ -18,5 +19,9 @@ interface InsectDao {
 
     @Delete
     suspend fun deleteInsect(insect: Insect): Int
+
+    @Update
+    suspend fun update(insect: Insect)
+
 
 }
