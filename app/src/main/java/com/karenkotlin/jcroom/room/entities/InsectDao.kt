@@ -5,12 +5,12 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface InsectDao {
     @Query("SELECT * FROM Insect")
-    suspend fun getAllInsects(): List<Insect>
-
+    fun getAllInsects(): Flow<List<Insect>>
     @Insert
     suspend fun addInsect(insect: Insect): Long
 

@@ -68,3 +68,15 @@ Room
 ├── DAO     → CRUD
 └── Database → Conexión
 ```
+
+
+## PARA NAVEGACION
+en: libs.versions.toml:
+
+navigationCompose = "2.7.7"
+
+## En [libraries]:
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+
+## en dependencias
+implementation(libs.androidx.navigation.compose)
