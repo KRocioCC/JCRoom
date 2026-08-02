@@ -1,10 +1,10 @@
 package com.karenkotlin.jcroom.room.entities
 
-import androidx.room3.Dao
-import androidx.room3.Delete
-import androidx.room3.Insert
-import androidx.room3.Query
-import androidx.room3.Update
+import androidx.room.Dao
+import androidx.room.Delete
+import androidx.room.Insert
+import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface InsectDao {
@@ -23,5 +23,5 @@ interface InsectDao {
     @Update
     suspend fun update(insect: Insect)
 
-
 }
+
